@@ -15,7 +15,6 @@ namespace OOPFlyingVehicle
         public AerialVehicle()
         {
             this.Engine = new Engine();
-            
         }
 
         public virtual void StartEngine()
@@ -35,8 +34,10 @@ namespace OOPFlyingVehicle
 
         public void FlyUp(int HowManyFeet)
         {
+            //If HowMany feet is nagtive trow invaid operation exception
             if (HowManyFeet < 0) throw new InvalidOperationException("Can't FlyUp a negative amount");
             
+            throw new NotImplementedException();
         }
 
         public void FlyDown()
@@ -73,7 +74,6 @@ namespace OOPFlyingVehicle
             string about = string.Format("This {0} has a max altitude of {1} ft. \nIt's current altitude is {2} ft. \n{3}", 
                 this.ToString(), this.MaxAltitude.ToString(), this.CurrentAltitude, this.getEngineStartedString());
             return about;
-            
         }
     }
 }
